@@ -19,4 +19,4 @@ See the section about [running tests](https://facebook.github.io/create-react-ap
 
 This app is hosted on netlify from initiation and progress can therefore be followed live on the staging URL.\
 Kindly visit [Staging Environment](https://tosin-hr-center.netlify.app/) for more information.
-
+*Deployment Status:* [![Netlify Status](https://api.netlify.com/api/v1/badges/e0155591-502d-470c-9dd0-2b99bbb625c6/deploy-status)](https://app.netlify.com/sites/tosin-hr-center/deploys)
