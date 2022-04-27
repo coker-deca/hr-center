@@ -1,0 +1,93 @@
+[{
+	"sickLeaveDays": 5,
+	"leaveAvailable": 15,
+	"department":"Engineering",
+	"officeOrRemote": "remote",
+	"away": "Sick",
+	"title": "Frontend Team Lead",
+	"manager": "Tosin Coker",
+	"name": "Ade Tiger"
+},{
+	"sickLeaveDays": 5,
+	"leaveAvailable": 15,
+	"department":"Engineering",
+	"officeOrRemote": "remote",
+	"away": "Sick",
+	"title": "Backend Team Lead",
+	"manager": "Tosin Coker",
+	"name": "Ade Lion"
+},{
+	"sickLeaveDays": 5,
+	"leaveAvailable": 15,
+	"department":"Engineering",
+	"officeOrRemote": "remote",
+	"away": "Sick",
+	"title": "Backend Engineer",
+	"manager": "Ade Lion",
+	"name": "Ade Cub"
+},{
+	"sickLeaveDays": 5,
+	"leaveAvailable": 15,
+	"department":"Engineering",
+	"officeOrRemote": "remote",
+	"away": "Sick",
+	"title": "Frontend Engineer",
+	"manager": "Ade Tiger",
+	"name": "Ade Cub2"
+},{
+	"sickLeaveDays": 5,
+	"leaveAvailable": 15,
+	"department":"Engineering",
+	"management":"true",
+	"officeOrRemote": "office",
+	"away": "false",
+	"title": "CTO",
+	"manager": "Jagaban",
+	"name": "Tosin Coker"
+},{
+	"sickLeaveDays": 5,
+	"leaveAvailable": 15,
+	"department":"Management",
+	"management":"true",
+	"officeOrRemote": "office",
+	"away": "false",
+	"title": "CEO",
+	"manager": "",
+	"name": "Jagaban"
+},{
+	"sickLeaveDays": 5,
+	"leaveAvailable": 15,
+	"department":"People/Process",
+	"officeOrRemote": "remote",
+	"away": "leave",
+	"title": "Talent Acquisition",
+	"manager": "Baby Face",
+	"name": "Recruiter 1"
+},{
+	"sickLeaveDays": 5,
+	"leaveAvailable": 15,
+	"department":"People/Process",
+	"management":"true",
+	"officeOrRemote": "office",
+	"away": "false",
+	"title": "Frontend Engineer",
+	"manager": "Jagaban",
+	"name": "Baby Face"
+},{
+	"sickLeaveDays": 5,
+	"leaveAvailable": 15,
+	"department":"CFO",
+	"management":"true",
+	"manager": "Jagaban",
+	"name": "Money Bag"
+},{
+	"sickLeaveDays": 5,
+	"leaveAvailable": 15,
+	"department":"Marketing",
+	"management":"true",
+	"officeOrRemote": "remote",
+	"away": "false",
+	"title": "Direcctor of Sales & Marketing",
+	"manager": "Jagaban",
+	"name": "Sweet Tooth"
+}]
