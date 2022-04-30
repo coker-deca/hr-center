@@ -15,9 +15,9 @@ export const FooterContainer = styled.div`
         list-style: none;
         align-items: start;
         font-size: 14;
-        width: 100%;
+        width: 95%;
         max-width: 1440px;
-        margin: 0 10%;
+        padding: 0 3%;
 
         .column {
             display: flex;
