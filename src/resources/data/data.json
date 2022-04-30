@@ -1,9 +1,48 @@
 [{
 	"sickLeaveDays": 5,
 	"leaveAvailable": 15,
+	"department":"Operations",
+	"management":"true",
+	"office": "office",
+	"away": "false",
+	"title": "CEO",
+	"manager": null,
+	"name": "Jagaban"
+},{
+	"sickLeaveDays": 5,
+	"leaveAvailable": 15,
 	"department":"Engineering",
-	"officeOrRemote": "remote",
-	"away": "Sick",
+	"management":"true",
+	"office": "office",
+	"title": "CTO",
+	"manager": "Jagaban",
+	"name": "Tosin Coker"
+},{
+	"sickLeaveDays": 5,
+	"leaveAvailable": 15,
+	"department":"People/Process",
+	"management":"true",
+	"office": "office",
+	"away": "false",
+	"title": "Frontend Engineer",
+	"manager": "Jagaban",
+	"name": "Baby Face"
+},{
+	"sickLeaveDays": 5,
+	"leaveAvailable": 15,
+	"department":"Finance",
+	"away": "false",
+	"title": "CFO",
+	"management":"true",
+	"office": "office",
+	"manager": "Jagaban",
+	"name": "Money Bag"
+},{
+	"sickLeaveDays": 5,
+	"leaveAvailable": 15,
+	"department":"Engineering",
+	"office": "remote",
+	"away": "Leave",
 	"title": "Frontend Team Lead",
 	"manager": "Tosin Coker",
 	"name": "Ade Tiger"
@@ -11,7 +50,7 @@
 	"sickLeaveDays": 5,
 	"leaveAvailable": 15,
 	"department":"Engineering",
-	"officeOrRemote": "remote",
+	"office": "remote",
 	"away": "Sick",
 	"title": "Backend Team Lead",
 	"manager": "Tosin Coker",
@@ -20,8 +59,8 @@
 	"sickLeaveDays": 5,
 	"leaveAvailable": 15,
 	"department":"Engineering",
-	"officeOrRemote": "remote",
-	"away": "Sick",
+	"office": "remote",
+	"away": "Leave",
 	"title": "Backend Engineer",
 	"manager": "Ade Lion",
 	"name": "Ade Cub"
@@ -29,7 +68,7 @@
 	"sickLeaveDays": 5,
 	"leaveAvailable": 15,
 	"department":"Engineering",
-	"officeOrRemote": "remote",
+	"office": "remote",
 	"away": "Sick",
 	"title": "Frontend Engineer",
 	"manager": "Ade Tiger",
@@ -37,55 +76,18 @@
 },{
 	"sickLeaveDays": 5,
 	"leaveAvailable": 15,
-	"department":"Engineering",
-	"management":"true",
-	"officeOrRemote": "office",
-	"away": "false",
-	"title": "CTO",
-	"manager": "Jagaban",
-	"name": "Tosin Coker"
-},{
-	"sickLeaveDays": 5,
-	"leaveAvailable": 15,
-	"department":"Management",
-	"management":"true",
-	"officeOrRemote": "office",
-	"away": "false",
-	"title": "CEO",
-	"manager": "",
-	"name": "Jagaban"
-},{
-	"sickLeaveDays": 5,
-	"leaveAvailable": 15,
 	"department":"People/Process",
-	"officeOrRemote": "remote",
-	"away": "leave",
+	"office": "remote",
+	"away": "Leave",
 	"title": "Talent Acquisition",
 	"manager": "Baby Face",
 	"name": "Recruiter 1"
 },{
 	"sickLeaveDays": 5,
 	"leaveAvailable": 15,
-	"department":"People/Process",
-	"management":"true",
-	"officeOrRemote": "office",
-	"away": "false",
-	"title": "Frontend Engineer",
-	"manager": "Jagaban",
-	"name": "Baby Face"
-},{
-	"sickLeaveDays": 5,
-	"leaveAvailable": 15,
-	"department":"CFO",
-	"management":"true",
-	"manager": "Jagaban",
-	"name": "Money Bag"
-},{
-	"sickLeaveDays": 5,
-	"leaveAvailable": 15,
 	"department":"Marketing",
 	"management":"true",
-	"officeOrRemote": "remote",
+	"office": "remote",
 	"away": "false",
 	"title": "Direcctor of Sales & Marketing",
 	"manager": "Jagaban",

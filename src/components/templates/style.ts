@@ -18,23 +18,44 @@ export const Divider = styled.div`
     }
 `;
 
-export const Container = styled.section<{size?:string}>`
-    @media only screen and (max-width: 992px){
-        width: 100%;
-    }
-    position: relative;
-    flex-grow: 1;
-    width: ${props=>props.size ? props.size : "60%"};
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+export const Container = styled.section`
     padding: 0 3%;
 `;
 
+export const Column = styled.div`
+min-width: 350px;
+.container {
+    background-color: #FFFFFF;
+    border: 1px solid grey;
+    margin: 5px;
+    border-radius: 10px;
+    cursor: pointer;
+    width: 30%;
+    padding: 10px 16px;
+    :hover {
+      border-color: lightblue;
+      :nth-child(n) > span {
+        color: lightblue;
+      }
+    }
+  }
+  .title {
+        color: #6699cc;
+        margin-bottom: 12px;
+        min-width: 102px;
+        text-align: center;
+    }
+    .value {
+        color: darkgray;
+        font-weight: bold;
+        font-size: 40;
+        letter-spacing: 1px;
+        line-height: 50px;
+        margin: 0;
+    }
+`;
 export const Row = styled.div`
     display: flex;
-    flex-direction: column;
     align-items: center;    justify-content: space-between;
     height: 100%;
 

@@ -7,7 +7,7 @@ const HomeTemplate: FunctionComponent<PropsWithChildren<{}>> = ({
   children,
 }) => {
   return (
-    <Wrapper>
+    <Wrapper style={{ backgroundColor: "#DBEDF2" }}>
       <NavBar />
       <Container>{children}</Container>
     </Wrapper>

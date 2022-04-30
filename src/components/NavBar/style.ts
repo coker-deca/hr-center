@@ -1,11 +1,11 @@
 import styled from 'styled-components';
 
 export const StyledNavbar = styled.header`
+  background-color: #05668D;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin: 0 10%;
-
+  padding: 0 5%;
   font-family: "Gilroy-Bold";
   font-weight: 400;
 `;
