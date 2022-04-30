@@ -103,7 +103,7 @@ function OrgChart({ data }: { data: any }) {
   return (
     <div
       ref={wrapperRef}
-      style={{ marginBottom: "1rem", minHeight: "400px", width: "100%" }}
+      style={{ margin: "1rem", minHeight: "250px", width: "80%" }}
     >
       <svg
         width={"100%"}
