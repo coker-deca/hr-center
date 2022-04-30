@@ -48,3 +48,13 @@ export const loginSchema = yup
       .matches(/\d+/, "One number"),
   })
   .required();
+
+export const newEmployeeSchema = yup
+  .object()
+  .shape({
+    name: yup.string().required('Please Enter employee name').min(5, "Please enter first and last name, at least 5 characters"),
+    title: yup.string().required('Please Add a Job Title'),
+    manager: yup.string().required('Please Add a direct manager').min(5, "Please enter first and last name, at least 5 characters"),
+    department: yup.string().required('Please Add Department'),
+  })
+  .required();

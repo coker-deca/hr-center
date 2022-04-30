@@ -1,9 +1,10 @@
+import { FunctionComponent } from 'react';
 import { PieChart } from 'react-minimal-pie-chart';
 
-import TreeChart from '../components/Org-Chart/OrgChart';
-import { Column, Row } from '../components/templates/style';
-import Card from '../components/ui/Card';
-import myData from '../resources/data/data.json';
+import TreeChart from '../Org-Chart/OrgChart';
+import { Column, Row } from '../templates/style';
+import { StyledButton } from '../ui/Button';
+import Card from '../ui/Card';
 
 const data: any[] = [];
 
@@ -11,7 +12,7 @@ for (let x = 1; x <= 24; x++) {
   data.push({ x: x, y: Math.floor(Math.random() * 100) });
 }
 
-type Keys = {
+export type Keys = {
   sickLeaveDays: number;
   leaveAvailable: number;
   department: string;
@@ -22,6 +23,8 @@ type Keys = {
   manager: string;
   name: string;
 };
+
+const myData: Keys[] = JSON.parse(localStorage.getItem("data") || "[]");
 export type OrgChartType = {
   manager: string | null;
   name: string;
@@ -52,7 +55,9 @@ const renderOrgChart = () => {
   return <TreeChart data={root} />;
 };
 
-const Charts = () => {
+const Charts: FunctionComponent<{ buttonClick: () => void }> = ({
+  buttonClick,
+}) => {
   const renderPie = (list: string[], division: string) => {
     return (
       <Column>
@@ -114,7 +119,7 @@ const Charts = () => {
   const chartValues = (props: string[]) => {
     const data = myData.reduce((accumulator: any, obj) => {
       Object.entries(obj).forEach(([key, value]) => {
-        if (props.includes(value)) {
+        if (typeof value === "string" && props.includes(value)) {
           if (!accumulator[value]) accumulator[value] = [];
           accumulator[value].push(obj);
         }
@@ -159,6 +164,17 @@ const Charts = () => {
         )}
         {renderPie(["Sick", "Leave", "false"], "By Leave Status")}
       </Row>
+      <Row>
+        <StyledButton
+          style={{ marginLeft: "auto" }}
+          size="40%"
+          type="submit"
+          onClick={buttonClick}
+        >
+          Add Employee
+        </StyledButton>
+      </Row>
+      <hr />
       <Row>
         <hr />
       </Row>

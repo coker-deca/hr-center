@@ -2,7 +2,6 @@ import styled from 'styled-components';
 
 export const StyledForm = styled.form`
     padding: 10px;
-    margin-top: 50px;
     width: 100%;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-style: normal;
@@ -13,10 +12,11 @@ export const StyledForm = styled.form`
     }
     h2 {
         font-size: 36px;
-        line-height: 16px;
+        line-height: 30px;
         color: #3C1D59;
         margin: 0;
-        margin-bottom: 36px;
+        margin-bottom: 20px;
+        text-align: center;
     }
     p.details {
         font-size: 16px;

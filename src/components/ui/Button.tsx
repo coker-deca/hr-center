@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
-export const StyledButton = styled.button`
-  width: 100%;
+export const StyledButton = styled.button<{ size?: string }>`
+  width: ${(props) => (props.size ? props.size : "100%")};
   place-items: center;
   box-sizing: border-box;
   font-style: normal;

@@ -21,22 +21,26 @@ const AuthPage = () => {
     handleSubmit,
     formState: { errors },
   } = useForm({ resolver: yupResolver(schema) });
-  return (
-    <div>
-      <AuthTemplate
-        handleSubmit={handleSubmit}
-        title={title}
-        details={details}
-        path={isReg ? "signup" : "signin"}
-      >
-        {isReg ? (
-          <SignUp errors={errors} register={register} />
-        ) : (
-          <SignIn errors={errors} register={register} />
-        )}
-      </AuthTemplate>
-    </div>
-  );
+    const onSubmit = (data: any) => {
+      console.log(data);
+      alert(`${isReg ? "Signed Up" : "Signed In"} Successfully`);
+    };
+    return (
+      <div>
+        <AuthTemplate
+          handleSubmit={handleSubmit}
+          title={title}
+          details={details}
+          onSubmit={onSubmit}
+        >
+          {isReg ? (
+            <SignUp errors={errors} register={register} />
+          ) : (
+            <SignIn errors={errors} register={register} />
+          )}
+        </AuthTemplate>
+      </div>
+    );
 };
 
 export default AuthPage;

@@ -10,7 +10,14 @@ const NavBar = () => {
   return (
     <StyledNavbar className="navbar">
       <NavbarItem>
-        <img src={logo} alt="logo" style={{ width: "30%", height: "auto" }} />
+        <img
+          onClick={() => {
+            history.push("/");
+          }}
+          src={logo}
+          alt="logo"
+          style={{ width: "30%", height: "auto" }}
+        />
       </NavbarItem>
       <NavbarItem>
         <NavbarItem

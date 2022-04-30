@@ -1,8 +1,8 @@
 import { hierarchy, linkHorizontal, select, tree } from 'd3';
 import React, { memo, useEffect, useRef } from 'react';
 
-import { OrgChartType } from '../../DashboardCharts/Charts';
 import useResizeObserver from '../../hooks/useResizeObserver';
+import { OrgChartType } from '../DashboardCharts/Charts';
 
 function usePrevious(value: OrgChartType) {
   const ref = useRef<OrgChartType>();
@@ -26,7 +26,6 @@ function OrgChart({ data }: { data: any }) {
       dimensions || wrapperRef.current?.getBoundingClientRect()!;
     // transform hierarchical data
     const root = hierarchy<any>(data);
-    //   console.log(data);
     const treeLayout = tree().size([height, width]);
 
     const linkGenerator = linkHorizontal<any, any>()

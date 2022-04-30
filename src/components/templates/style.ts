@@ -20,6 +20,7 @@ export const Divider = styled.div`
 
 export const Container = styled.section`
     padding: 0 3%;
+
 `;
 
 export const Column = styled.div`
@@ -37,6 +38,9 @@ min-width: 350px;
       :nth-child(n) > span {
         color: lightblue;
       }
+    }
+    @media only screen and (max-width: 992px){
+        width: 70%;
     }
   }
   .title {
@@ -58,6 +62,10 @@ export const Row = styled.div`
     display: flex;
     align-items: center;    justify-content: space-between;
     height: 100%;
+
+    @media only screen and (max-width: 992px){
+        flex-direction: column;
+    }
 
     form-container{
         width: 38%;

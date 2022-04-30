@@ -9,13 +9,14 @@ export interface FormProps {
   details?: string;
   path?: string;
   handleSubmit: any;
+  onSubmit: (data: any) => void;
 }
 
 const AuthTemplate: FC<PropsWithChildren<FormProps>> = ({
   title,
   details,
   children,
-  path,
+  onSubmit,
   handleSubmit,
 }) => {
   return (
@@ -25,8 +26,8 @@ const AuthTemplate: FC<PropsWithChildren<FormProps>> = ({
       </Row>
       <Row>
         <Form
+          onSubmit={onSubmit}
           title={title}
-          path={path}
           handleSubmit={handleSubmit}
           details={details}
         >
