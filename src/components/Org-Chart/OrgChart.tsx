@@ -13,7 +13,6 @@ function usePrevious(value: OrgChartType) {
 }
 
 function OrgChart({ data }: { data: any }) {
-  console.log("chart rerender");
   const svgRef = useRef<SVGSVGElement>(null);
   const wrapperRef = useRef<HTMLDivElement>(null);
   const dimensions = useResizeObserver(wrapperRef);

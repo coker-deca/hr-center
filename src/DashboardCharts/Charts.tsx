@@ -1,4 +1,3 @@
-import { memo, useCallback, useEffect } from 'react';
 import { PieChart } from 'react-minimal-pie-chart';
 
 import TreeChart from '../components/Org-Chart/OrgChart';
@@ -41,12 +40,8 @@ const idMapping = newData.reduce((acc, el, i) => {
 }, initObj);
 
 let root: OrgChartType;
-let i = 0;
-
 const renderOrgChart = () => {
   newData.forEach((el) => {
-    console.log(i);
-    i += 1;
     if (el.manager === null) {
       root = el;
       return;
@@ -58,8 +53,6 @@ const renderOrgChart = () => {
 };
 
 const Charts = () => {
-  useEffect(() => {}, []);
-  console.log("MyData", myData);
   const renderPie = (list: string[], division: string) => {
     return (
       <Column>
@@ -139,7 +132,7 @@ const Charts = () => {
       return obj;
     });
   };
-  const memoizedChart = useCallback(() => renderOrgChart(), []);
+
   return (
     <Column>
       <Row>
@@ -169,9 +162,9 @@ const Charts = () => {
       <Row>
         <hr />
       </Row>
-      <Row>{memoizedChart()}</Row>
+      <Row>{renderOrgChart()}</Row>
     </Column>
   );
 };
 
-export default memo(Charts);
+export default Charts;
