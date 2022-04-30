@@ -1,4 +1,4 @@
-import { FunctionComponent, PropsWithChildren } from 'react';
+import { FunctionComponent } from 'react';
 
 import Footer from '../Footer/Footer';
 import NavBar from '../NavBar/NavBar';
