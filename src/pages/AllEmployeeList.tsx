@@ -13,6 +13,7 @@ export const AllEmployeeList: FunctionComponent = () => (
       tableRowData={myData}
       caption="Employee List"
       isLoading={myData.length ? false : true}
+      paginate
     />
   </HomeTemplate>
 );
