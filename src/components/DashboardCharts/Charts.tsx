@@ -1,4 +1,4 @@
-import { FunctionComponent } from 'react';
+import { FunctionComponent, useCallback, useMemo } from 'react';
 import { PieChart } from 'react-minimal-pie-chart';
 
 import TreeChart from '../Org-Chart/OrgChart';
@@ -24,40 +24,44 @@ export type Keys = {
   name: string;
 };
 
-const myData: Keys[] = JSON.parse(localStorage.getItem("data") || "[]");
 export type OrgChartType = {
   manager: string | null;
   name: string;
   children: OrgChartType[];
 };
-const newData = myData.map((datum) => ({
-  manager: datum.manager,
-  name: datum.name,
-  children: new Array<OrgChartType>(0),
-}));
-
-const initObj: any = {};
-const idMapping = newData.reduce((acc, el, i) => {
-  acc[el.name] = i;
-  return acc;
-}, initObj);
-
-let root: OrgChartType;
-const renderOrgChart = () => {
-  newData.forEach((el) => {
-    if (el.manager === null) {
-      root = el;
-      return;
-    }
-    const parentEl = newData[idMapping[el.manager]];
-    parentEl.children = [...parentEl.children, el];
-  });
-  return <TreeChart data={root} />;
-};
 
 const Charts: FunctionComponent<{ buttonClick: () => void }> = ({
   buttonClick,
 }) => {
+  const myData: Keys[] = JSON.parse(localStorage.getItem("data") || "[]");
+
+  const newData = useMemo(
+    () =>
+      myData.map((datum) => ({
+        manager: datum.manager,
+        name: datum.name,
+        children: new Array<OrgChartType>(0),
+      })),
+    [myData]
+  );
+
+  const initObj: any = {};
+  const idMapping = newData.reduce((acc, el, i) => {
+    acc[el.name] = i;
+    return acc;
+  }, initObj);
+  const renderOrgChart = useCallback(() => {
+    let root: OrgChartType | null = null;
+    newData.forEach((el) => {
+      if (el.manager === null) {
+        root = el;
+        return;
+      }
+      const parentEl = newData[idMapping[el.manager]];
+      parentEl.children = [...parentEl.children, el];
+    });
+    return <TreeChart data={root} />;
+  }, [idMapping, newData]);
   const renderPie = (list: string[], division: string) => {
     return (
       <Column>

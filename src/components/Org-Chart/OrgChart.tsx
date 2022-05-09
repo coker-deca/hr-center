@@ -36,6 +36,7 @@ function OrgChart({ data }: { data: any }) {
     treeLayout(root);
 
     // nodes
+    svg.selectAll(".node").remove();
     svg
       .selectAll(".node")
       .data(root.descendants())
